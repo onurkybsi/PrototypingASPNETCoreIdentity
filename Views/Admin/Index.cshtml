@@ -1,0 +1,57 @@
+﻿@model IEnumerable<AppUser>
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.js"></script>
+    <title>Admin</title>
+</head>
+<body style="margin:20px; height: 100%; overflow: hidden">
+    <div class="ui segment">
+        <h2 class="ui center aligned header">
+            <div class="content">
+                User Accounts
+            </div>
+        </h2>
+    </div>
+
+    @if (Model.Count() == 0)
+    {
+        <div class="ui warning message" style="width:50%; margin:0 auto; text-align:center">
+            No User Accounts
+        </div>
+    }
+    else
+    {
+        <table class="ui selectable inverted table">
+            <thead>
+                <tr>
+                    <th>Id</th>
+                    <th>Username</th>
+                    <th class="right aligned">Email</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td>@item.Id</td>
+                        <td>@item.UserName</td>
+                        <td class="right aligned">@item.Email</td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    }
+
+    <a class="ui button" asp-action="Create">Create</a>
+</body>
+</html>
