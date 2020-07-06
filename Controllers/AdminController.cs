@@ -2,6 +2,7 @@
 using Microsoft.AspNetCore.Mvc;
 using PrototypingASPNETCoreIdentity.Models;
 using PrototypingASPNETCoreIdentity.Models.ViewModels;
+using System.Collections;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 
@@ -31,16 +32,24 @@ namespace PrototypingASPNETCoreIdentity.Controllers
                     Email = newUser.Email
                 };
 
-                var result = await _userManager.CreateAsync(_newUser, newUser.Password);
+                var createUserResult = await _userManager.CreateAsync(_newUser, newUser.Password);
 
-                if (result.Succeeded) return RedirectToAction("Index");
+                if (createUserResult.Succeeded) return RedirectToAction("Index");
                 else
                 {
-                    return RedirectToAction("Create", result.Errors);
+                    SetIdentityErrorsToModelState(createUserResult.Errors);
                 }
             }
 
-            return View();
+            return View(newUser);
+        }
+
+        private void SetIdentityErrorsToModelState(IEnumerable<IdentityError> identityErrors)
+        {
+            foreach (var error in identityErrors)
+            {
+                ModelState.AddModelError(error.Code, error.Description);
+            }
         }
     }
 }
