@@ -37,15 +37,21 @@
                     <th>Id</th>
                     <th>Username</th>
                     <th class="right aligned">Email</th>
+                    <th></th>
                 </tr>
             </thead>
             <tbody>
-                @foreach (var item in Model)
+                @foreach (var appUser in Model)
                 {
                     <tr>
-                        <td>@item.Id</td>
-                        <td>@item.UserName</td>
-                        <td class="right aligned">@item.Email</td>
+                        <td>@appUser.Id</td>
+                        <td>@appUser.UserName</td>
+                        <td class="right aligned">@appUser.Email</td>
+                        <td>
+                            <form asp-action="Delete" asp-route-id="@appUser.Id" method="post">
+                                <button type="submit" class="negative ui button">Delete</button>
+                            </form>
+                        </td>
                     </tr>
                 }
             </tbody>
