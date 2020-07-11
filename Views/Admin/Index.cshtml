@@ -47,9 +47,11 @@
                         <td>@appUser.Id</td>
                         <td>@appUser.UserName</td>
                         <td class="right aligned">@appUser.Email</td>
-                        <td>
+                        <td style="display:inline-flex">
                             <form asp-action="Delete" asp-route-id="@appUser.Id" method="post">
                                 <button type="submit" class="negative ui button">Delete</button>
+                                <a class="ui button blue" asp-action="Edit"
+                                   asp-route-id="@appUser.Id">Edit</a>
                             </form>
                         </td>
                     </tr>

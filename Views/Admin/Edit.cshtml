@@ -1,4 +1,5 @@
-﻿@model UserCreationModel
+﻿@model AppUser
+
 @{
     Layout = null;
 }
@@ -11,7 +12,7 @@
     <script src="https://code.jquery.com/jquery-3.1.1.min.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.css">
     <script src="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.js"></script>
-    <title>Create</title>
+    <title>Edit</title>
 </head>
 <body style="margin:20px; height: 100%; overflow: hidden">
     @if (!ViewData.ModelState.IsValid)
@@ -19,21 +20,21 @@
         <div asp-validation-summary="All" class="ui error message"></div>
     }
 
-    <form asp-action="Create" class="ui form">
+    <form asp-action="Edit" method="post" class="ui form">
         <div class="field">
-            <label asp-for="Username">Username</label>
-            <input asp-for="Username" type="text" placeholder="Username">
+            <label asp-for="Id"></label>
+            <input asp-for="Id" disabled />
         </div>
         <div class="field">
-            <label asp-for="Email">Email</label>
+            <label asp-for="Email"></label>
             <input asp-for="Email" type="text" placeholder="Email">
         </div>
         <div class="field">
-            <label asp-for="Password">Password</label>
-            <input asp-for="Password" type="text" placeholder="Password">
+            <label for="password">Password</label>
+            <input name="password" />
         </div>
-
-        <button asp-action="Create" class="ui button" type="submit">Submit</button>
+        <button type="submit" class="ui button">Save</button>
+        <a asp-action="Index" class="ui button">Cancel</a>
     </form>
 </body>
 </html>
