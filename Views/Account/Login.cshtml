@@ -1,0 +1,33 @@
+﻿@model LoginModel
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.js"></script>
+    <meta name="viewport" content="width=device-width" />
+    <title>Login</title>
+</head>
+<body>
+    @if (!ViewData.ModelState.IsValid)
+    {
+        <div asp-validation-summary="All" class="ui error message" style="width:800px; margin:0 auto; top: 18%;"></div>
+    }
+    <form class="ui form" asp-action="Login" method="post" style="width:800px; margin:0 auto; top: 20%;">
+        <div class="field">
+            <label asp-for="Email">Email</label>
+            <input asp-for="Email" type="text" placeholder="Email">
+        </div>
+        <div class="field">
+            <label asp-for="Password">Last Name</label>
+            <input asp-for="Password" type="password" placeholder="Password">
+        </div>
+        <button class="ui secondary button" type="submit">Log in</button>
+    </form>
+</body>
+</html>
