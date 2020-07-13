@@ -23,8 +23,13 @@ using PrototypingASPNETCoreIdentity.Models.ViewModels;
 
 #line default
 #line hidden
+#line 3 "C:\Users\onurb\Source\Repos\PrototypingASPNETCoreIdentity\PrototypingASPNETCoreIdentity\Views\_ViewImports.cshtml"
+using Microsoft.AspNetCore.Identity;
+
+#line default
+#line hidden
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"93e40e344d985bca59867a244bd81ca4982f8040", @"/Views/Account/AccessDenied.cshtml")]
-    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"2e6253e0442c240212f22d695ae2b5c32e8c1225", @"/Views/_ViewImports.cshtml")]
+    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"b9daa36d657699d0957dc0216398f39f0bcefa20", @"/Views/_ViewImports.cshtml")]
     public class Views_Account_AccessDenied : global::Microsoft.AspNetCore.Mvc.Razor.RazorPage<dynamic>
     {
         #line hidden
@@ -63,7 +68,7 @@ using PrototypingASPNETCoreIdentity.Models.ViewModels;
             WriteLiteral("\r\n<!DOCTYPE html>\r\n\r\n<html>\r\n");
             EndContext();
             BeginContext(58, 309, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("head", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "93e40e344d985bca59867a244bd81ca4982f80403866", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("head", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "93e40e344d985bca59867a244bd81ca4982f80404060", async() => {
                 BeginContext(64, 296, true);
                 WriteLiteral(@"
     <meta name=""viewport"" content=""width=device-width"" />
@@ -88,7 +93,7 @@ using PrototypingASPNETCoreIdentity.Models.ViewModels;
             WriteLiteral("\r\n");
             EndContext();
             BeginContext(369, 223, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("body", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "93e40e344d985bca59867a244bd81ca4982f80405351", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("body", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "93e40e344d985bca59867a244bd81ca4982f80405545", async() => {
                 BeginContext(375, 210, true);
                 WriteLiteral("\r\n    <div class=\"ui negative message\">\r\n        <div class=\"header\">\r\n            Access denied!\r\n        </div>\r\n        <p>\r\n            You are not authorized to access this page\r\n        </p>\r\n    </div>\r\n");
                 EndContext();

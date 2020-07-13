@@ -21,6 +21,7 @@ namespace PrototypingASPNETCoreIdentity
             services.AddTransient<IUserValidator<AppUser>, UserValidator>();
 
             services.AddDbContext<AppIdentityDbContext>(options => options.UseSqlServer(Configuration["Data:IdentityUsersDb:ConnectionString"]));
+            
             services.AddIdentity<AppUser, IdentityRole>().AddEntityFrameworkStores<AppIdentityDbContext>().AddDefaultTokenProviders();
 
             services.AddMvc();

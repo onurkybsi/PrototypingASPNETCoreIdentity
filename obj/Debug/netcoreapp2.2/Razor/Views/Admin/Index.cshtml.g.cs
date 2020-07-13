@@ -23,8 +23,13 @@ using PrototypingASPNETCoreIdentity.Models.ViewModels;
 
 #line default
 #line hidden
+#line 3 "C:\Users\onurb\Source\Repos\PrototypingASPNETCoreIdentity\PrototypingASPNETCoreIdentity\Views\_ViewImports.cshtml"
+using Microsoft.AspNetCore.Identity;
+
+#line default
+#line hidden
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"714d0d29ce18fdd13e2fb7c703788c92d8fa6ca9", @"/Views/Admin/Index.cshtml")]
-    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"2e6253e0442c240212f22d695ae2b5c32e8c1225", @"/Views/_ViewImports.cshtml")]
+    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"b9daa36d657699d0957dc0216398f39f0bcefa20", @"/Views/_ViewImports.cshtml")]
     public class Views_Admin_Index : global::Microsoft.AspNetCore.Mvc.Razor.RazorPage<IEnumerable<AppUser>>
     {
         private static readonly global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute __tagHelperAttribute_0 = new global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute("class", new global::Microsoft.AspNetCore.Html.HtmlString("ui button blue"), global::Microsoft.AspNetCore.Razor.TagHelpers.HtmlAttributeValueStyle.DoubleQuotes);
@@ -73,7 +78,7 @@ using PrototypingASPNETCoreIdentity.Models.ViewModels;
             WriteLiteral("\r\n<!DOCTYPE html>\r\n\r\n<html>\r\n");
             EndContext();
             BeginContext(87, 399, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("head", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "714d0d29ce18fdd13e2fb7c703788c92d8fa6ca96504", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("head", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "714d0d29ce18fdd13e2fb7c703788c92d8fa6ca96698", async() => {
                 BeginContext(93, 386, true);
                 WriteLiteral(@"
     <meta name=""viewport"" content=""width=device-width"" />
@@ -99,7 +104,7 @@ using PrototypingASPNETCoreIdentity.Models.ViewModels;
             WriteLiteral("\r\n");
             EndContext();
             BeginContext(488, 1669, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("body", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "714d0d29ce18fdd13e2fb7c703788c92d8fa6ca98084", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("body", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "714d0d29ce18fdd13e2fb7c703788c92d8fa6ca98278", async() => {
                 BeginContext(546, 194, true);
                 WriteLiteral("\r\n    <div class=\"ui segment\">\r\n        <h2 class=\"ui center aligned header\">\r\n            <div class=\"content\">\r\n                User Accounts\r\n            </div>\r\n        </h2>\r\n    </div>\r\n\r\n");
                 EndContext();
@@ -172,12 +177,12 @@ using PrototypingASPNETCoreIdentity.Models.ViewModels;
                 WriteLiteral("</td>\r\n                        <td style=\"display:inline-flex\">\r\n                            ");
                 EndContext();
                 BeginContext(1614, 351, false);
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "714d0d29ce18fdd13e2fb7c703788c92d8fa6ca911555", async() => {
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "714d0d29ce18fdd13e2fb7c703788c92d8fa6ca911749", async() => {
                     BeginContext(1681, 132, true);
                     WriteLiteral("\r\n                                <button type=\"submit\" class=\"negative ui button\">Delete</button>\r\n                                ");
                     EndContext();
                     BeginContext(1813, 115, false);
-                    __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "714d0d29ce18fdd13e2fb7c703788c92d8fa6ca912098", async() => {
+                    __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "714d0d29ce18fdd13e2fb7c703788c92d8fa6ca912292", async() => {
                         BeginContext(1920, 4, true);
                         WriteLiteral("Edit");
                         EndContext();
@@ -263,7 +268,7 @@ using PrototypingASPNETCoreIdentity.Models.ViewModels;
                 WriteLiteral("\r\n    ");
                 EndContext();
                 BeginContext(2097, 51, false);
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "714d0d29ce18fdd13e2fb7c703788c92d8fa6ca918079", async() => {
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "714d0d29ce18fdd13e2fb7c703788c92d8fa6ca918273", async() => {
                     BeginContext(2138, 6, true);
                     WriteLiteral("Create");
                     EndContext();

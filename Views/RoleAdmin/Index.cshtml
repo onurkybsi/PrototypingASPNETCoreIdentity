@@ -1,0 +1,57 @@
+﻿@model IEnumerable<IdentityRole>
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.js"></script>
+    <title>Admin</title>
+</head>
+<body style="margin:20px; height: 100%; overflow: hidden">
+    <div class="ui segment">
+        <h2 class="ui center aligned header">
+            <div class="content">
+                User Roles
+            </div>
+        </h2>
+    </div>
+
+
+    <table class="ui selectable inverted table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Name</th>
+                <th class="right aligned">Users</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var role in Model)
+            {
+                <tr>
+                    <td>@role.Id</td>
+                    <td>@role.Name</td>
+                    <td class="right aligned" role-users="@role.Id"></td>
+                    <td style="display:inline-flex">
+                        <form asp-action="Delete" asp-route-id="@role.Id" method="post">
+                            <button type="submit" class="negative ui button">Delete</button>
+                            <a class="ui button blue" asp-action="Edit"
+                               asp-route-id="@role.Id">Edit</a>
+                        </form>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+
+    <a class="ui button" asp-action="Create">Create</a>
+</body>
+</html>
