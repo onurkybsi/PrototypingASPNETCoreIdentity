@@ -1,4 +1,4 @@
-﻿
+﻿@model Dictionary<string, string>
 @{
     Layout = null;
 }
@@ -30,9 +30,16 @@
                 <td class="collapsing">
                 </td>
                 <td><i><b>User name</b></i></td>
-                <td>OnurK</td>
+                <td>@Model["Username"]</td>
+            </tr>
+            <tr>
+                <td class="collapsing">
+                </td>
+                <td><i><b>Login</b></i></td>
+                <td>@Model["IsAuthenticated"]</td>
             </tr>
         </tbody>
     </table>
+    <a asp-controller="Account" asp-action="Logout" class="negative ui button">Logout</a>
 </body>
 </html>
