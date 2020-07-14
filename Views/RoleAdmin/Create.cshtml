@@ -18,10 +18,10 @@
     {
         <div asp-validation-summary="All" class="ui error message"></div>
     }
-    <form asp-action="Create" class="ui form">
+    <form asp-action="Create" method="post" class="ui form">
         <div class="field">
             <label for="roleName">Role name</label>
-            <input for="roleName" type="text" placeholder="Role name">
+            <input name="roleName" type="text" placeholder="Role name">
         </div>
         <button asp-action="Create" class="ui button" type="submit">Submit</button>
         <a asp-action="Index" class="ui button">Cancel</a>

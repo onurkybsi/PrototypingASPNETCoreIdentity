@@ -44,5 +44,34 @@ namespace PrototypingASPNETCoreIdentity.Controllers
 
             return View(roleName);
         }
+
+        [HttpPost]
+        public async Task<IActionResult> Delete(string id)
+        {
+            var role = await _roleManager.FindByIdAsync(id);
+
+            if (role != null)
+            {
+                var result = await _roleManager.DeleteAsync(role);
+
+                if(result.Succeeded)
+                {
+                    RedirectToAction("Index");
+                }
+                else
+                {
+                    foreach (var error in result.Errors)
+                    {
+                        ModelState.AddModelError(error.Code, error.Description);
+                    }
+                }
+            }
+            else
+            {
+                ModelState.AddModelError("Error", "No role found");
+            }
+
+            return View("Index", _roleManager.Roles);
+        }
     }
 }

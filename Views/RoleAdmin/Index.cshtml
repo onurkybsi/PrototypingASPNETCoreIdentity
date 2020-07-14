@@ -22,7 +22,10 @@
             </div>
         </h2>
     </div>
-
+    @if (!ViewData.ModelState.IsValid)
+    {
+        <div asp-validation-summary="All" class="ui error message"></div>
+    }
 
     <table class="ui selectable inverted table">
         <thead>
@@ -42,9 +45,9 @@
                     <td class="right aligned" role-users="@role.Id"></td>
                     <td style="display:inline-flex">
                         <form asp-action="Delete" asp-route-id="@role.Id" method="post">
-                            <button type="submit" class="negative ui button">Delete</button>
                             <a class="ui button blue" asp-action="Edit"
                                asp-route-id="@role.Id">Edit</a>
+                            <button type="submit" class="negative ui button">Delete</button>
                         </form>
                     </td>
                 </tr>
